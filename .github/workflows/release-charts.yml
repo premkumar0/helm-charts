@@ -3,7 +3,7 @@ name: Build and Deploy Helm Charts to gh-pages
 on:
   push:
     branches:
-      - "*"
+      - "main"
 
 jobs:
   build:
@@ -28,30 +28,17 @@ jobs:
             helm package "$chart_dir" -d "release"
             echo "Packaged $chart_name"
           done
+          cd release
+          helm repo index .
 
       - name: Set up Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Switch to gh-pages Branch
-        run: |
-          git branch -a
-          git checkout gh-pages
-          git pull origin gh-pages --rebase
-          rm -rf *.tgz README.md index.yaml # Remove existing chart packages and other files
-
-      - name: Copy Packaged Charts
-        run: |
-          cp "$GITHUB_WORKSPACE"/charts/* .
-          echo "Copied packaged charts"
-
-      - name: Update Index File
-        run: |
-          helm repo index .
-
-      - name: Commit and Push Changes to gh-pages
-        run: |
-          git add .
-          git commit -m "Update Helm charts"
-          git push origin gh-pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./release # Adjust the path to your build folder
+          publish_branch: gh-pages
