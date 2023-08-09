@@ -25,6 +25,8 @@ jobs:
         run: |
           for chart_dir in $(find ./charts/ -type d); do
             chart_name=$(basename "$chart_dir")
+            echo "$chart_dir"
+            echo "$chart_name"
             helm package "$chart_dir" -d "release"
             echo "Packaged $chart_name"
           done
