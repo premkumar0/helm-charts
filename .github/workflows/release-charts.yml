@@ -23,7 +23,7 @@ jobs:
 
       - name: Build and Publish Charts
         run: |
-          for chart_dir in $(find ./charts/ -type d); do
+          for chart_dir in $(ls -d ./charts/*/); do
             chart_name=$(basename "$chart_dir")
             echo "$chart_dir"
             echo "$chart_name"
