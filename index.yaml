@@ -3,7 +3,7 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-09T13:12:44.106630493Z"
+    created: "2023-08-09T13:16:33.86314801Z"
     description: A Helm chart for Kubernetes
     digest: 10dc6e74a7394b153ad051ddf37604b713e0d07ac60259ddf60e0e9d0830e81d
     name: demo-chart
@@ -14,7 +14,7 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-09T13:12:44.122256747Z"
+    created: "2023-08-09T13:16:33.875862468Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -26,4 +26,4 @@ entries:
     urls:
     - hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-09T13:12:44.105970778Z"
+generated: "2023-08-09T13:16:33.862465996Z"
