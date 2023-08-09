@@ -25,8 +25,6 @@ jobs:
         run: |
           for chart_dir in $(ls -d ./charts/*/); do
             chart_name=$(basename "$chart_dir")
-            echo "$chart_dir"
-            echo "$chart_name"
             helm package "$chart_dir" -d "release"
             echo "Packaged $chart_name"
           done
@@ -38,6 +36,7 @@ jobs:
 
       - name: Switch to gh-pages Branch
         run: |
+          git branch -a
           git checkout gh-pages
           git pull origin gh-pages --rebase
           rm -rf *.tgz README.md index.yaml # Remove existing chart packages and other files
