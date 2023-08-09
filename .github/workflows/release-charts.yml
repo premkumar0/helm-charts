@@ -16,13 +16,14 @@ jobs:
       - name: Set up Helm
         uses: azure/setup-helm@v1
         with:
-          helm-version: "latest"
+          version: "latest"
 
       - name: Build and Publish Charts
         run: |
-          for chart_dir in $(find . -type d -name '*-chart'); do
+          ls -a
+          for chart_dir in $(find . -type d -name '*'); do
             chart_name=$(basename "$chart_dir")
-            helm package "$chart_dir" -d "$GITHUB_WORKSPACE/charts"
+            helm package "$chart_dir" -d "charts"
             echo "Packaged $chart_name"
           done
 
