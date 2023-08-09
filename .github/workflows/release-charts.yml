@@ -27,8 +27,7 @@ jobs:
       #     done
       - name: Build Charts
         run: |
-          ls -a
-          helm package ./hello-wrold/ -d charts
+          helm package ./hello-world/ -d charts
 
       - name: Set up Git
         run: |
