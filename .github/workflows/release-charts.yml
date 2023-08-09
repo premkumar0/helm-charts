@@ -18,16 +18,16 @@ jobs:
         with:
           version: "latest"
 
-      # - name: Build and Publish Charts
-      #   run: |
-      #     for chart_dir in $(find . -type d -name '*-chart'); do
-      #       chart_name=$(basename "$chart_dir")
-      #       helm package "$chart_dir" -d "charts"
-      #       echo "Packaged $chart_name"
-      #     done
-      - name: Build Charts
+      - name: Create release directory
+        run: mkdir -p release
+
+      - name: Build and Publish Charts
         run: |
-          helm package ./hello-world/ -d charts
+          for chart_dir in $(find ./charts/ -type d); do
+            chart_name=$(basename "$chart_dir")
+            helm package "$chart_dir" -d "release"
+            echo "Packaged $chart_name"
+          done
 
       - name: Set up Git
         run: |
