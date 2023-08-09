@@ -18,13 +18,16 @@ jobs:
         with:
           version: "latest"
 
-      - name: Build and Publish Charts
+      # - name: Build and Publish Charts
+      #   run: |
+      #     for chart_dir in $(find . -type d -name '*-chart'); do
+      #       chart_name=$(basename "$chart_dir")
+      #       helm package "$chart_dir" -d "charts"
+      #       echo "Packaged $chart_name"
+      #     done
+      - name: Build Charts
         run: |
-          for chart_dir in $(find . -type d -name '*-chart'); do
-            chart_name=$(basename "$chart_dir")
-            helm package "$chart_dir" -d "charts"
-            echo "Packaged $chart_name"
-          done
+          helm package hello-wrold/ -d charts
 
       - name: Set up Git
         run: |
