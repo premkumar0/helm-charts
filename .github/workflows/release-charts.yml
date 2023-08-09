@@ -20,7 +20,6 @@ jobs:
 
       - name: Build and Publish Charts
         run: |
-          ls -a
           for chart_dir in $(find . -type d -name '*'); do
             chart_name=$(basename "$chart_dir")
             helm package "$chart_dir" -d "charts"
