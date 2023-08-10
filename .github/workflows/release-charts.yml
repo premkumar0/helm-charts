@@ -21,7 +21,7 @@ jobs:
       - name: Create release directory
         run: |
           mkdir -p release
-          cp README.md ./release/
+          cp README.md ./release/index.md
 
       - name: Build and Publish Charts
         run: |
@@ -44,3 +44,5 @@ jobs:
           github_token: ${{ secrets.PA_TOKEN }}
           publish_dir: ./release # Adjust the path to your build folder
           publish_branch: gh-pages
+          user_name: "$GITHUB_ACTOR[bot]"
+          user_email: "$GITHUB_ACTOR[bot]@users.noreply.github.com"
