@@ -1,4 +1,4 @@
-name: Build and Deploy Helm Charts to gh-pages
+name: Release Charts
 
 on:
   push:
