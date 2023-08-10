@@ -44,8 +44,8 @@ jobs:
           github_token: ${{ secrets.PA_TOKEN }}
           publish_dir: ./release # Adjust the path to your build folder
           publish_branch: gh-pages
-          user_name: "$GITHUB_ACTOR[bot]"
-          user_email: "$GITHUB_ACTOR[bot]@users.noreply.github.com"
+          user_name: ${{ github.actor }}[bot]
+          user_email: ${{ github.actor }}[bot]@users.noreply.github.com
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
