@@ -21,7 +21,7 @@ jobs:
       - name: Create release directory
         run: |
           mkdir -p release
-          cp README.md ./release/index.md
+          cp README.md ./release/
 
       - name: Build and Publish Charts
         run: |
@@ -46,3 +46,9 @@ jobs:
           publish_branch: gh-pages
           user_name: "$GITHUB_ACTOR[bot]"
           user_email: "$GITHUB_ACTOR[bot]@users.noreply.github.com"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.PA_TOKEN }}"
+          CR_GENERATE_RELEASE_NOTES: true
