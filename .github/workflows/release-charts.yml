@@ -19,7 +19,9 @@ jobs:
           version: "latest"
 
       - name: Create release directory
-        run: mkdir -p release
+        run: |
+          mkdir -p release
+          cp README.md ./release/
 
       - name: Build and Publish Charts
         run: |
