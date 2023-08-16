@@ -3,7 +3,7 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:07:30.104813385Z"
+    created: "2023-08-16T06:36:20.355007235Z"
     description: A Helm chart for Kubernetes
     digest: 10dc6e74a7394b153ad051ddf37604b713e0d07ac60259ddf60e0e9d0830e81d
     name: demo-chart
@@ -14,14 +14,14 @@ entries:
   elk-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:07:30.11051069Z"
+    created: "2023-08-16T06:36:20.360682706Z"
     dependencies:
     - name: elk-operator
       repository: https://premkumar0.github.io/helm-charts
-      version: 0.1.0
+      version: 0.1.1
     description: |
       A Helm chart designed to simplify the deployment of the ELK (Elasticsearch, Logstash, Kibana) stack components. This chart encapsulates configurations for deploying Beats, Logstash, and Elasticsearch, enabling users to quickly set up and manage their own ELK stack instances for centralized logging and analysis.
-    digest: b21b325fb07449e26be2816ad9da0053085354ddeaca290a7349f0e1556c150c
+    digest: 27c12494686fc37d343e9c04e328f26ed8c48049d68a9e061324adac9f8204a8
     name: elk-app
     type: application
     urls:
@@ -30,18 +30,18 @@ entries:
   elk-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:07:30.115077994Z"
+    created: "2023-08-16T06:36:20.371764245Z"
     description: A Helm chart containing all CRDs and operator for the ELK stack
-    digest: bda71d0753f2dbfeb52f8e4b73722d6c7de33103efa498d7deeeebaab35515b9
+    digest: cfb47c1fae6da9198e402430930151a0f820bc02a52ba400ff86e9ff4a58955c
     name: elk-operator
     type: application
     urls:
-    - elk-operator-0.1.0.tgz
-    version: 0.1.0
+    - elk-operator-0.1.1.tgz
+    version: 0.1.1
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:07:30.123306202Z"
+    created: "2023-08-16T06:36:20.380726558Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -53,4 +53,4 @@ entries:
     urls:
     - hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-16T06:07:30.104062084Z"
+generated: "2023-08-16T06:36:20.353981722Z"
