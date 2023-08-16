@@ -3,7 +3,7 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:36:20.355007235Z"
+    created: "2023-08-16T12:38:48.41405183Z"
     description: A Helm chart for Kubernetes
     digest: 10dc6e74a7394b153ad051ddf37604b713e0d07ac60259ddf60e0e9d0830e81d
     name: demo-chart
@@ -14,14 +14,14 @@ entries:
   elk-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:36:20.360682706Z"
+    created: "2023-08-16T12:38:48.41824768Z"
     dependencies:
     - name: elk-operator
       repository: https://premkumar0.github.io/helm-charts
       version: 0.1.1
     description: |
       A Helm chart designed to simplify the deployment of the ELK (Elasticsearch, Logstash, Kibana) stack components. This chart encapsulates configurations for deploying Beats, Logstash, and Elasticsearch, enabling users to quickly set up and manage their own ELK stack instances for centralized logging and analysis.
-    digest: 27c12494686fc37d343e9c04e328f26ed8c48049d68a9e061324adac9f8204a8
+    digest: ef7ef85de2fc007b765413b1e6b6404d553176cce3d99e2af53d6086fa228ac3
     name: elk-app
     type: application
     urls:
@@ -30,7 +30,7 @@ entries:
   elk-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:36:20.371764245Z"
+    created: "2023-08-16T12:38:48.426486778Z"
     description: A Helm chart containing all CRDs and operator for the ELK stack
     digest: cfb47c1fae6da9198e402430930151a0f820bc02a52ba400ff86e9ff4a58955c
     name: elk-operator
@@ -41,7 +41,7 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-16T06:36:20.380726558Z"
+    created: "2023-08-16T12:38:48.434824477Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -53,4 +53,4 @@ entries:
     urls:
     - hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-16T06:36:20.353981722Z"
+generated: "2023-08-16T12:38:48.413235121Z"
