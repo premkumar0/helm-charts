@@ -3,7 +3,7 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-10T07:26:20.020697938Z"
+    created: "2023-08-16T04:23:56.139242583Z"
     description: A Helm chart for Kubernetes
     digest: 10dc6e74a7394b153ad051ddf37604b713e0d07ac60259ddf60e0e9d0830e81d
     name: demo-chart
@@ -11,10 +11,21 @@ entries:
     urls:
     - demo-chart-0.1.0.tgz
     version: 0.1.0
+  elk-operator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-16T04:23:56.143960855Z"
+    description: A Helm chart containing all CRDs and operator for the ELK stack
+    digest: bda71d0753f2dbfeb52f8e4b73722d6c7de33103efa498d7deeeebaab35515b9
+    name: elk-operator
+    type: application
+    urls:
+    - elk-operator-0.1.0.tgz
+    version: 0.1.0
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-10T07:26:20.030583495Z"
+    created: "2023-08-16T04:23:56.151635898Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -26,4 +37,4 @@ entries:
     urls:
     - hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-10T07:26:20.019820033Z"
+generated: "2023-08-16T04:23:56.137708394Z"
