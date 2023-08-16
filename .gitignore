@@ -2,3 +2,4 @@ commands.sh
 index.yaml
 postgres-vals.yaml
 release/*
+locals/

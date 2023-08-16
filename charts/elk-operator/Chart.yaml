@@ -1,0 +1,12 @@
+apiVersion: v2
+name: elk-operator
+description: A Helm chart containing all CRDs and operator for the ELK stack
+
+# A chart can be either an 'application' or a 'library' chart.
+type: application
+
+# This is the chart version. Increment this each time you make changes to the chart or its templates.
+version: 0.1.0
+
+# This is the version of the application being deployed. Increment this for application changes.
+appVersion: "1.16.0"
