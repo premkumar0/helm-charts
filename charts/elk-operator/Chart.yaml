@@ -6,7 +6,7 @@ description: A Helm chart containing all CRDs and operator for the ELK stack
 type: application
 
 # This is the chart version. Increment this each time you make changes to the chart or its templates.
-version: 0.1.0
+version: 0.1.1
 
 # This is the version of the application being deployed. Increment this for application changes.
 appVersion: "1.16.0"

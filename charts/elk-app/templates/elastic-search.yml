@@ -7,10 +7,19 @@ metadata:
     k8s-app: es-logging
 spec:
   version: 8.7.0
+  transport:
+    service:
+      spec:
+        type: LoadBalancer
+        ports:
+          - port: 9200
+            protocol: TCP
+            targetPort: 9200
   http:
     tls:
       selfSignedCertificate:
         disabled: true
+
   nodeSets:
     - name: data
       count: 1
