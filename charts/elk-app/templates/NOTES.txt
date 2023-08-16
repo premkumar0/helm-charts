@@ -1,0 +1,5 @@
+echo "To view the Elasticsearch password:"
+echo "Run the following command in your terminal:"
+echo "kubectl get secret es-logging-es-elastic-user -n kube-system -o=jsonpath='{.data.elastic}' | base64 --decode; echo"
+echo
+echo "This will decode and display the Elasticsearch password."
