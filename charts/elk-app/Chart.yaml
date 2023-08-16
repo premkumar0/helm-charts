@@ -1,0 +1,19 @@
+apiVersion: v2
+name: elk-app
+description: >
+  A Helm chart designed to simplify the deployment of the ELK (Elasticsearch, Logstash, Kibana) stack components.
+  This chart encapsulates configurations for deploying Beats, Logstash, and Elasticsearch, enabling users to quickly
+  set up and manage their own ELK stack instances for centralized logging and analysis.
+
+# A chart can be either an 'application' or a 'library' chart.
+type: application
+
+# This is the chart version. Increment this each time you make changes to the chart or its templates.
+version: 0.1.0
+
+# This is the version number of the application being deployed. Increment this for application changes.
+appVersion: "1.16.0"
+dependencies:
+  - name: elk-operator
+    version: 0.1.0
+    repository: https://premkumar0.github.io/helm-charts

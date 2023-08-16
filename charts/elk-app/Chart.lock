@@ -1,0 +1,6 @@
+dependencies:
+- name: elk-operator
+  repository: https://premkumar0.github.io/helm-charts
+  version: 0.1.0
+digest: sha256:d6ae709619a67bbb7d61d3d2b3f7cfdd0819325c4251269290ac8d82997e95a5
+generated: "2023-08-16T10:38:30.528454362+05:30"
